@@ -17,7 +17,7 @@ const authorData = {
   occupation: "author",
   famousWorks: [
     { name: "The Hobbit", releaseYear: "1937" },
-    { name: "The Fellowship of the Ring", releaseYear: "1954" },
+    { name: "The Lord of the Rings", releaseYear: "1968" },
   ],
   similarAuthors: [
     { name: "George R.R. Martin", book: "A Game of Thrones" },
@@ -31,7 +31,7 @@ app.get("/", (request, response) => {
 });
 
 app.get("/about", (request, response) => {
-  response.render("about");
+  response.render("about", authorData);
 });
 
 app.get("/works", (request, response) => {
