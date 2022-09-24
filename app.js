@@ -9,6 +9,23 @@ app.set("views", __dirname + "/views");
 
 app.use(express.static("public"));
 
+const authorData = {
+  name: "J.R.R. Tolkien",
+  birthDate: "03/01/1892",
+  birthPlace: "Bloemfontein, South Africa",
+  deathDate: "02/09/1973",
+  occupation: "author",
+  famousWorks: [
+    { name: "The Hobbit", releaseYear: "1937" },
+    { name: "The Fellowship of the Ring", releaseYear: "1954" },
+  ],
+  similarAuthors: [
+    { name: "George R.R. Martin", book: "A Game of Thrones" },
+    { name: "C.S. Lewis", book: "The Chronicles of Narnia" },
+    { name: "Robert Jordan", book: "The Wheel of Time" },
+  ],
+};
+
 app.get("/", (request, response) => {
   response.render("home");
 });
